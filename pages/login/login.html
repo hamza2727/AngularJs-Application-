@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Fleet Fast Track | login Form</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="../../plugins/fontawesome-free/css/all.min.css"
+    />
+    <!-- Ionicons -->
+    <link
+      rel="stylesheet"
+      href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"
+    />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../../dist/css/adminlte.min.css" />
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700"
+      rel="stylesheet"
+    />
+    <style>
+      .main-header,
+      .main-footer {
+        margin-left: 0px !important;
+      }
+
+      .sidebar-mini.sidebar-collapse .main-header {
+        margin-left: 0rem !important;
+      }
+
+      .navbar-green1 {
+        background-color: #007954 !important;
+      }
+
+      .btn-green {
+        color: #ffffff;
+        background-color: #007954;
+        border-color: #007954;
+        box-shadow: none;
+        border-radius: 2rem;
+        width: 100px;
+      }
+
+      .form-control {
+        border-radius: 2rem;
+      }
+
+      .btn:hover {
+        color: #fff;
+      }
+
+      body {
+        background: #e7eaeb;
+      }
+
+      .main-footer {
+        color: #fff;
+        background: #293142;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+
+      label {
+        color: #706f6f;
+      }
+      .marginBottom40 {
+        margin-bottom: 40px;
+      }
+
+      .form-group {
+        margin-bottom: 10px;
+      }
+
+      input.form-control,
+      input[type="text"],
+      select.form-control {
+        height: 35px !important;
+        border-radius: 17.5px;
+        border: 1px solid #bbb;
+        font-size: 13px;
+        color: #2c3c6d;
+      }
+
+      label {
+        padding-top: 7px;
+        text-align: right;
+        font-size: 13px;
+        color: #706f6f;
+        margin-bottom: 5px;
+        font-weight: 700;
+      }
+
+      .btn.btn-active {
+        height: 35px !important;
+        border-radius: 17.5px;
+        background: #007954;
+        border: 1px solid #007954;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-size: 12px;
+        padding: 8px 25px;
+        outline: none;
+      }
+
+      .btn.btn-active:hover,
+      .btn.btn-active:active,
+      .btn.btn-active:focus {
+        color: #fff;
+        background: #007954;
+      }
+
+      .select--icon {
+        position: relative;
+      }
+
+      .select--icon:after {
+        content: "\f107";
+        font-family: FontAwesome;
+        font-size: 25px;
+        color: #aaa;
+        right: 10px;
+        top: -4px;
+        padding: 0;
+        position: absolute;
+        bottom: 0;
+        width: 25px;
+        text-align: center;
+        pointer-events: none;
+      }
+
+      .navbar-brand {
+        color: #fff;
+      }
+
+      select.form-control {
+        padding-right: 5px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        text-indent: 1px;
+        text-overflow: "";
+      }
+
+      select::-ms-expand {
+        display: none;
+      }
+
+      .box-mask-arrow {
+        position: relative;
+      }
+
+      .box-mask-arrow:after {
+        box-sizing: border-box;
+        height: 12px;
+        width: 12px;
+        border-style: solid;
+        border-color: #aaa;
+        border-width: 0px 2px 2px 0px;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        content: "";
+        text-shadow: 0 0 black;
+        position: absolute;
+        right: 15px;
+        top: 8px;
+        background: #fff;
+        pointer-events: none;
+      }
+
+      .box-mask-arrow:before {
+        content: "";
+        position: absolute;
+        right: 2px;
+        top: 1px;
+        background: #fff;
+        width: 39px;
+        height: 33px;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        pointer-events: none;
+      }
+
+      .wrapper-fft-content {
+        height: 78vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e7eaeb;
+      }
+
+      .panel-default > .panel-heading {
+        color: #293142;
+        background-color: #ffffff !important;
+        border-color: #bbb !important;
+      }
+
+      html {
+        background-color: #e7eaeb;
+      }
+
+      #error-message-modal .header-ntc.modal--search {
+        height: 30px;
+        line-height: 30px;
+        background: #fff;
+        font-size: 22px;
+        font-weight: 700;
+        color: #2c3c6d;
+        padding: 30px 20px;
+      }
+
+      #error-message-modal .modal-footer {
+        background-color: #fff;
+        border: none;
+        margin-top: 0px;
+        padding: 0px 20px 20px;
+        text-align: right;
+      }
+
+      #error-message-modal .modal {
+        display: contents !important;
+      }
+
+      .modal {
+        overflow: visible;
+        position: absolute !important;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body class="hold-transition">
+    <div class="wrapper-login">
+      <div class="main-header navbar navbar-expand navbar-green1 navbar-light">
+        <img src="../../dist/img/imperial-logo.png" width="122px" />
+      </div>
+      <div
+        class="main-header navbar navbar-expand navbar-gray-dark navbar-light"
+        style="
+          margin-top: -1px;
+          color: #fff;
+          background: #57575b;
+          padding-left: 20px;
+          font-weight: 500;
+          font-size: 18px;
+        "
+      >
+        Fleet Fast Track
+      </div>
+      <div class="wrapper-fft-content page-login">
+        <link
+          href="/Content/bootstrap/css/bootstrap.min.css"
+          rel="stylesheet"
+        />
+        <div class="page-header">
+          <h1 style="text-align: center;"></h1>
+        </div>
+        <div
+          class="row"
+          style="
+            background: #fff;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.125),
+              0 1px 3px rgba(0, 0, 0, 0.2);
+            margin-bottom: 1rem;
+            border-radius: 0.25rem;
+          "
+        >
+          <div class="form-center-3sixty">
+            <div
+              class="panel panel-default"
+              style="padding: 20px; width: 470px;"
+            >
+              <div
+                class="panel-heading"
+                style="
+                  border-bottom: 1px solid transparent;
+                  border-top-right-radius: 3px;
+                  border-top-left-radius: 3px;
+                "
+              >
+                <h3 class="panel-title" style="font-size: 16px;">
+                  Please enter your login information
+                </h3>
+              </div>
+              <div class="panel-body">
+                <form
+                  name="form"
+                  method="post"
+                  class="ng-valid-maxlength ng-dirty ng-valid-parse ng-valid ng-valid-required"
+                >
+                  <fieldset>
+                    <div class="form-group">
+                      <label for="username">Username</label>
+                      <input
+                        type="text"
+                        id="exampleInputUsername1"
+                        name="username"
+                        class="form-control"
+                        placeholder="Username"
+                      />
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Password</label>
+                      <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        class="form-control"
+                        placeholder="Password"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <button
+                        type="submit"
+                        class="btn btn-active float-right"
+                        id="btnClick"
+                        onclick="location.href='../../pages/penaltyChargeNotices/penaltyChargeNotices.html';"
+                      >
+                        Next
+                      </button>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-footer navbar-gray-dark">
+        <span
+          >Copyright &copy; 2020
+          <a href="#" style="color: #007954;"
+            >Imperial Civil Enforcement Solutions</a
+          ></span
+        >
+      </div>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- jQuery -->
+    <script src="../../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- jquery-validation -->
+    <script src="../../plugins/jquery-validation/jquery.validate.min.js"></script>
+    <script src="../../plugins/jquery-validation/additional-methods.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../../dist/js/demo.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $.validator.setDefaults({
+          submitHandler: function () {
+            alert("Form successful submitted!");
+          },
+        });
+        $(function () {
+          $("button").on("click", function (e) {
+            e.preventDefault();
+            //    location.href = '../../pages/vehiclesList/vehiclesList.html';
+          });
+        });
+        $("#quickForm").validate({
+          rules: {
+            email: {
+              required: true,
+              email: true,
+            },
+            password: {
+              required: true,
+              minlength: 5,
+            },
+            terms: {
+              required: true,
+            },
+          },
+          messages: {
+            email: {
+              required: "Please enter a email address",
+              email: "Please enter a vaild email address",
+            },
+            password: {
+              required: "Please provide a password",
+              minlength: "Your password must be at least 5 characters long",
+            },
+            terms: "Please accept our terms",
+          },
+          errorElement: "span",
+          errorPlacement: function (error, element) {
+            error.addClass("invalid-feedback");
+            element.closest(".form-group").append(error);
+          },
+          highlight: function (element, errorClass, validClass) {
+            $(element).addClass("is-invalid");
+          },
+          unhighlight: function (element, errorClass, validClass) {
+            $(element).removeClass("is-invalid");
+          },
+        });
+        $(document).ready(function () {
+          validate();
+          $("#exampleInputUsername1,#password").keyup(validate);
+        });
+
+        function validate() {
+          if (
+            $("#exampleInputUsername1").val().length > 0 &&
+            $("#password").val().length > 0
+          ) {
+            $("#btnClick").prop("disabled", false);
+          } else {
+            $("#btnClick").prop("disabled", true);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
